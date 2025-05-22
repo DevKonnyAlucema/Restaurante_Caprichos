@@ -224,7 +224,7 @@ body {
 /* ------------------------------------ seccion 03 Servicios q ofrece el restaurante ---------------------------- */
 
 .servicios-grid a {
-    text-decoration: none;       /* Quita el subrayado */
+    text-decoration: none;     /* Quita el subrayado */
     color: inherit;              /* Hereda el color del contenedor */
 }
 
