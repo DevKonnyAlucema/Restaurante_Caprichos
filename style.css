@@ -222,6 +222,17 @@ body {
     }
 }
 /* ------------------------------------ seccion 03 Servicios q ofrece el restaurante ---------------------------- */
+
+.servicios-grid a {
+    text-decoration: none;       /* Quita el subrayado */
+    color: inherit;              /* Hereda el color del contenedor */
+}
+
+.servicios-grid a:hover {
+    text-decoration: none;       /* Asegura que tampoco se subraye al pasar el mouse */
+    color: inherit;
+}
+
 .servicios {
   background-image: url('img/fondo-servicios.jpg');
   background-size: cover;
