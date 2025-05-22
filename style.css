@@ -221,208 +221,227 @@ body {
         font-size: 1em;
     }
 }
+/* ------------------------------------ seccion 03 Servicios q ofrece el restaurante ---------------------------- */
+.servicios {
+  background-image: url('img/fondo-servicios.jpg');
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 60px 20px;
+  color: #222;
+  text-align: center;
+}
 
+.servicios::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 0;
+}
+
+.contenido-servicios {
+  position: relative;
+  z-index: 1;
+}
+
+.contenido-servicios h2 {
+  font-size: 2.5em;
+  margin-bottom: 0.3em;
+  color: #fff;
+}
+
+.decoracion {
+  width: 60px;
+  height: 3px;
+  background: #ff69b4;
+  margin: 0 auto 30px;
+  border: none;
+  border-radius: 5px;
+}
+
+.servicios-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 25px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.servicio {
+  background-color: rgba(255, 255, 255, 0.85);
+  padding: 20px;
+  border-radius: 15px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.servicio:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.servicio img {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 15px;
+}
+
+.servicio h3 {
+  font-size: 1.3em;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.servicio p {
+  font-size: 0.95em;
+  color: #333;
+}
+  .invisible {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 0.6s ease-out;
+  }
+
+  .visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+.servicio:hover {
+  transform: translateY(-8px);
+  box-shadow:
+    0 0 10px rgba(255, 105, 180, 0.5),
+    0 0 20px rgba(255, 105, 180, 0.5),
+    0 0 30px rgba(255, 105, 180, 0.3);
+  border: 2px solid rgba(255, 105, 180, 0.5);
+}
 
 /* ------------------------------------------ seccion 04 Galeria y carrusel ------------------------------------- */
 /* --- Estilos para el Slider Mejorado y Responsive --- */
+ #custom-slider-section {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      margin: 50px auto;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+      aspect-ratio: 16 / 9;
+      background-color: #fff;
+    }
 
-#custom-slider-section {
-    position: relative;
-    width: 100%;
-    max-width: 1000px; /* Ajusta el ancho máximo a tu gusto */
-    margin: 50px auto; /* Centrar y dar espacio */
-    overflow: hidden; /* Oculta lo que se desborda del wrapper */
-    border-radius: 12px; /* Bordes más suaves */
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
-    aspect-ratio: 16 / 9; /* Mantiene una relación de aspecto (ej. 16:9) */
-    background-color: #fff; /* Fondo blanco si la imagen no carga bien */
-}
+    .slider-wrapper {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+    }
 
-.slider-wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    overflow: hidden; /* Muy importante para el carrusel */
-}
+    .slider-track {
+      display: flex;
+      height: 100%;
+      transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1);
+    }
 
-.slider-track {
-    display: flex;
-    height: 100%;
-    width: fit-content; /* El ancho se ajusta al contenido (todas las slides) */
-    transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1); /* Transición más suave y elástica */
-    /* cubic-bezier para un efecto más natural */
-}
+    .slide-item {
+      min-width: 100%;
+      height: 100%;
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-shrink: 0;
+      overflow: hidden;
+    }
 
-.slide-item {
-    min-width: 100%; /* Cada slide ocupa el 100% del ancho del wrapper visible */
-    height: 100%;
-    position: relative;
-    display: flex; /* Para centrar el contenido (imagen y caption) */
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0; /* Evita que las diapositivas se encojan */
-    overflow: hidden; /* Asegura que la imagen dentro no se desborde */
-}
-
-.slide-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Recorta la imagen para cubrir el área sin distorsionar */
-    display: block; /* Elimina espacio extra debajo de las imágenes */
-}
-
-.slide-caption {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: rgba(0, 0, 0, 0.75); /* Fondo más opaco para mayor legibilidad */
-    color: white;
-    padding: 15px 30px;
-    border-radius: 8px;
-    text-align: center;
-    max-width: 90%; /* Más ancho para texto */
-    opacity: 0; /* Oculto por defecto */
-    transition: opacity 0.4s ease, transform 0.4s ease;
-    pointer-events: none; /* Permite clics a través del caption si no es interactivo */
-}
-
-/* Mostrar caption en la diapositiva activa (o al hacer hover) */
-.slide-item:not(.active) .slide-caption { /* Por ejemplo, si quieres que solo se muestre en la activa */
-    opacity: 1;
-    transform: translateX(-50%) translateY(0); /* Posición normal */
-}
-
-/* Si quieres que los captions solo se muestren en hover */
-.slide-item:hover .slide-caption {
-    opacity: 1;
-    transform: translateX(-50%) translateY(-10px); /* Ligeramente hacia arriba */
-}
-
-.slide-caption h2 {
-    font-size: 1.8em;
-    margin-bottom: 8px;
-}
-
-.slide-caption p {
-    font-size: 1em;
-}
-
-/* --- Botones de Navegación (Flechas) --- */
-.slider-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0, 0, 0, 0.4); /* Transparente */
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    font-size: 2.5em; /* Tamaño más grande */
-    cursor: pointer;
-    border-radius: 50%;
-    z-index: 20; /* Por encima de las slides */
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: flex; /* Para centrar el ícono */
-    justify-content: center;
-    align-items: center;
-    line-height: 1; /* Eliminar espacio extra vertical */
-}
-
-.slider-button:hover {
-    background-color: rgba(0, 0, 0, 0.7);
-    transform: translateY(-50%) scale(1.1); /* Efecto al pasar el ratón */
-}
-
-.slider-button.prev {
-    left: 15px;
-}
-
-.slider-button.next {
-    right: 15px;
-}
-
-/* --- Puntos de Navegación (Dots) --- */
-.slider-dots-container {
-    position: absolute;
-    bottom: 15px;
-    left: 50%;
-    transform: translateX(-50%);
-    display: flex;
-    gap: 10px;
-    z-index: 20;
-}
-
-.slider-dots-container .dot {
-    width: 14px; /* Tamaño del dot */
-    height: 14px;
-    background-color: rgba(255, 255, 255, 0.6);
-    border-radius: 50%;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* Borde sutil */
-}
-
-.slider-dots-container .dot.active {
-    background-color: white;
-    transform: scale(1.2); /* Más grande si está activo */
-    border-color: white;
-}
-
-/* --- Media Queries para Responsividad --- */
-@media (max-width: 768px) {
-    #custom-slider-section {
-        margin: 30px auto;
-        border-radius: 0; /* Bordes rectos en móvil para ocupar todo el ancho */
-        max-width: 100%; /* Ocupa todo el ancho disponible */
+    .slide-item img,
+    .slide-item video {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .slide-caption {
-        padding: 10px 20px;
-        bottom: 10px;
-        max-width: 95%;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background-color: rgba(226, 163, 163, 0.75);
+      color: rgb(0, 0, 0);
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-align: center;
+      max-width: 90%;
+      opacity: 0;
+      transition: opacity 0.4s ease, transform 0.4s ease;
+      pointer-events: none;
+    }
+
+    .slide-item:hover .slide-caption {
+      opacity: 1;
+      transform: translateX(-50%) translateY(-10px);
     }
 
     .slide-caption h2 {
-        font-size: 1.3em;
+      font-size: 1.8em;
+      margin-bottom: 8px;
     }
 
     .slide-caption p {
-        font-size: 0.8em;
+      font-size: 1em;
     }
 
     .slider-button {
-        padding: 10px 15px;
-        font-size: 2em;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: rgba(0, 0, 0, 0.4);
+      color: rgb(255, 146, 246);
+      border: none;
+      padding: 15px 20px;
+      font-size: 2.5em;
+      cursor: pointer;
+      border-radius: 50%;
+      z-index: 20;
+      transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
-    .slider-button.prev {
-        left: 5px;
+    .slider-button:hover {
+      background-color: rgba(0, 0, 0, 0.7);
+      transform: translateY(-50%) scale(1.1);
     }
 
-    .slider-button.next {
-        right: 5px;
-    }
+    .slider-button.prev { left: 15px; }
+    .slider-button.next { right: 15px; }
 
     .slider-dots-container {
-        bottom: 5px;
-        gap: 6px;
+      position: absolute;
+      bottom: 15px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 20;
     }
 
     .slider-dots-container .dot {
-        width: 10px;
-        height: 10px;
+      width: 14px;
+      height: 14px;
+      background-color: rgba(255, 255, 255, 0.6);
+      border-radius: 50%;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      border: 2px solid rgba(255, 255, 255, 0.3);
     }
-}
 
-@media (max-width: 480px) {
-    .slide-caption h2 {
-        font-size: 1.1em;
+    .slider-dots-container .dot.active {
+      background-color: rgb(204, 0, 255);
+      transform: scale(1.2);
+      border-color: rgb(0, 255, 213);
     }
 
-    .slide-caption p {
-        display: none; /* Ocultar la descripción en pantallas muy pequeñas */
-    }
-}
 /*---------------------------------------------------------------------------------------------------------*/
 
 .about-us,.services-class{
