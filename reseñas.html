@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deja tu Reseña - Caprichos</title>
+    <link rel="stylesheet" href="reseñas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+
+    <!-- Barra de navegación -->
+    <header class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="img/FONDOS/LOGO.png" alt="Logo Caprichos"></a>
+        </div>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li> <!-- Enlace modificado -->
+            </ul>
+        </nav>
+        <button class="hamburger">
+            <i class="fas fa-bars"></i>
+        </button>
+    </header>
+
+    <section class="reseñas-container" id="reseñas">
+        <div class="reseñas-content">
+            <h2>¡Tu opinión nos importa!</h2>
+            <div class="spot-messages">
+                <div class="spot active">
+                    <i class="fas fa-comment-alt"></i>
+                    <p>¿Disfrutaste tu experiencia en Caprichos? ¡Nos encantaría saberlo! Tus comentarios nos inspiran y
+                        nos guían para ser mejores cada día.</p>
+                </div>
+                <div class="spot">
+                    <i class="fas fa-users"></i>
+                    <p>Tu reseña puede ser la guía perfecta para alguien más. ¡Sé parte de nuestra comunidad
+                        gastronómica!</p>
+                </div>
+                <div class="spot">
+                    <i class="fas fa-clock"></i>
+                    <p>Solo te tomará un minuto. ¡Tu tiempo es oro y lo valoramos mucho!</p>
+                </div>
+            </div>
+
+            <div class="rating-container">
+                <div class="stars">
+                    <i class="fas fa-star" data-rating="1"></i>
+                    <i class="fas fa-star" data-rating="2"></i>
+                    <i class="fas fa-star" data-rating="3"></i>
+                    <i class="fas fa-star" data-rating="4"></i>
+                    <i class="fas fa-star" data-rating="5"></i>
+                </div>
+                <span class="rating-text">Califica tu experiencia</span>
+            </div>
+
+            <form class="reseña-form">
+                <textarea placeholder="Cuéntanos qué te pareció..." required></textarea>
+                <input type="text" placeholder="Tu nombre (opcional)">
+                <button type="submit">Enviar Reseña <i class="fas fa-paper-plane"></i></button>
+            </form>
+
+            <div class="reseñas-cta">
+                <p>¿Listo para compartir tu experiencia?</p>
+                <a href="#reseña-form" class="cta-button">Escribe tu reseña ahora</a>
+            </div>
+
+            <div class="feed-reseñas">
+                <h3>Lo que dicen nuestros clientes:</h3>
+                <div id="listaResenas" class="lista-reseñas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="reseñas.js"></script>
+</body>
+
+</html>

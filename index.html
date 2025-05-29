@@ -13,7 +13,7 @@
 
 <body>
     <!---------------------------------------------- seccion 01 de Bienvenida ---------------------------------------------->
-    <section class="navbar-container fondo-seccion-01">
+    <section class="navbar-container fondo-seccion-01" id="inicio">
         <header class="navbar">
             <div class="logo">
                 <a href="#">
@@ -22,11 +22,11 @@
             </div>
             <nav class="nav-links">
                 <ul>
-                    <li><a href="#">Inicio</a></li> <!--seccion 01 de Bienvenida-->
-                    <li><a href="#">Acerca de </a></li> <!--seccion 02 quienes somos, una breve intro-->
-                    <li><a href="#">Servicios</a></li> <!--seccion 03 Servicios q ofrece el restaurante-->
-                    <li><a href="#">Galeria</a></li> <!--seccion 04 Galeria y carrusel -->
-                    <li><a href="#">Contactanos</a></li><!--seccion 05 Redes sociales y ubicacion -->
+                    <li><a href="#inicio">Inicio</a></li> <!--seccion 01 de Bienvenida-->
+                    <li><a href="#about">Acerca de</a></li> <!--seccion 02 quienes somos-->
+                    <li><a href="#servicios">Servicios</a></li> <!--seccion 03 Servicios-->
+                    <li><a href="#custom-slider-section">Galeria</a></li> <!--seccion 04 Galeria-->
+                    <li><a href="#contacto">Contactanos</a></li> <!--seccion 05 Contacto-->
                 </ul>
             </nav>
             <button class="hamburger-menu" aria-label="Abrir menú de navegación">
@@ -59,34 +59,34 @@
         </div>
     </section>
     <!------------------------------------ seccion 03 Servicios q ofrece el restaurante ------------------------------------>
-<section class="servicios" id="servicios">
-    <div class="contenido-servicios">
-        <h2>Nuestros Servicios</h2>
-        <hr class="decoracion">
-        <div class="servicios-grid">
-            <a href="pedidos_online.html" class="servicio">
-                <img src="img/pedido/telefono-inteligente (3).png" alt="Pedidos Online">
-                <h3>Pedidos Online</h3>
-                <p>Ordena desde tu celular fácilmente. Recoge en tienda o pide para llevar.</p>
-            </a>
-            <a href="menu_digital.html" class="servicio">
-                <img src="img/menu/restaurante.png" alt="Menú">
-                <h3>Menú</h3>
-                <p>Explora nuestro menú con imágenes y descripciones tentadoras.</p>
-            </a>
-            <a href="promociones.html" class="servicio">
-                <img src="img/promocion/descuento (1).png" alt="Eventos y Promociones">
-                <h3>Eventos y Promociones</h3>
-                <p>Consulta nuestros eventos especiales y disfruta de promociones exclusivas.</p>
-            </a>
-            <a href="resenas.html" class="servicio">
-                <img src="img/reseñas/revision-positiva.png" alt="Reseñas">
-                <h3>Reseñas</h3>
-                <p>Deja tu opinión para seguir mejorando.</p>
-            </a>
+    <section class="servicios" id="servicios">
+        <div class="contenido-servicios">
+            <h2>Nuestros Servicios</h2>
+            <hr class="decoracion">
+            <div class="servicios-grid">
+                <a href="pedidos_online.html" class="servicio">
+                    <img src="img/pedido/telefono-inteligente (3).png" alt="Pedidos Online">
+                    <h3>Pedidos Online</h3>
+                    <p>Ordena desde tu celular fácilmente. Recoge en tienda o pide para llevar.</p>
+                </a>
+                <a href="menu_digital.html" class="servicio">
+                    <img src="img/menu/restaurante.png" alt="Menú">
+                    <h3>Menú</h3>
+                    <p>Explora nuestro menú con imágenes y descripciones tentadoras.</p>
+                </a>
+                <a href="promociones.html" class="servicio">
+                    <img src="img/promocion/descuento (1).png" alt="Eventos y Promociones">
+                    <h3>Eventos y Promociones</h3>
+                    <p>Consulta nuestros eventos especiales y disfruta de promociones exclusivas.</p>
+                </a>
+                <a href="reseñas.html" class="servicio">
+                    <img src="img/reseñas/revision-positiva.png" alt="Reseñas">
+                    <h3>Reseñas</h3>
+                    <p>Deja tu opinión para seguir mejorando.</p>
+                </a>
+            </div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!------------------------------------------- seccion 04 Galeria y carrusel -------------------------------------------->
     <section id="custom-slider-section">
@@ -129,7 +129,9 @@
                 <!-- Slide 3 - Video -->
                 <div class="slide-item">
                     <video autoplay muted loop playsinline>
-                        <source src="video/SnapInsta.to_AQM0IF9bPjTWJRaurmDgzkCfkY5_NLRys2nzclcbOoMNLZ8I8jt_v05yb-YC2lTNDELOsBuWMRpTWgjqv0Q94pv33yGYKhZMyBvuf7g (1).mp4" type="video/mp4">
+                        <source
+                            src="video/SnapInsta.to_AQM0IF9bPjTWJRaurmDgzkCfkY5_NLRys2nzclcbOoMNLZ8I8jt_v05yb-YC2lTNDELOsBuWMRpTWgjqv0Q94pv33yGYKhZMyBvuf7g (1).mp4"
+                            type="video/mp4">
                     </video>
                     <div class="slide-caption">
                         <h2>Hamburguesa caprichosa</h2>
@@ -151,20 +153,22 @@
         </div>
     </section>
     <!----------------------------------------- Seccion 05 Redes sociales y ubicacion --------------------------------------->
-    <div class="redes-sociales">
-        <a href="https://www.facebook.com/share/1CGF3Kg4wb/?mibextid=wwXIfr" target="_blank">
-            <img class="icono" src="img/redes/fce2.png" alt="Facebook">
-        </a>
-        <a href="https://wa.me/573052212501" target="_blank">
-            <img class="icono" src="img/redes/wsp2.png" alt="WhatsApp">
-        </a>
-        <a href="https://www.instagram.com/caprichos_restaurantebga/" target="_blank">
-            <img class="icono" src="img/redes/ig2.png" alt="Instagram">
-        </a>
-        <a href="https://maps.app.goo.gl/6J1LAPvFjW2yKajt6?g_st=com.google.maps.preview.copy" target="_blank">
-            <img class="icono" src="img/redes/ubi2.png" alt="Ubicación">
-        </a>
-    </div>
+    <section class="redes-sociales-container" id="contacto">
+        <div class="redes-sociales">
+            <a href="https://www.facebook.com/share/1CGF3Kg4wb/?mibextid=wwXIfr" target="_blank">
+                <img class="icono" src="img/redes/fce2.png" alt="Facebook">
+            </a>
+            <a href="https://wa.me/573052212501" target="_blank">
+                <img class="icono" src="img/redes/wsp2.png" alt="WhatsApp">
+            </a>
+            <a href="https://www.instagram.com/caprichos_restaurantebga/" target="_blank">
+                <img class="icono" src="img/redes/ig2.png" alt="Instagram">
+            </a>
+            <a href="https://maps.app.goo.gl/6J1LAPvFjW2yKajt6?g_st=com.google.maps.preview.copy" target="_blank">
+                <img class="icono" src="img/redes/ubi2.png" alt="Ubicación">
+            </a>
+        </div>
+    </section>
     <script src="script.js"></script>
 </body>
 

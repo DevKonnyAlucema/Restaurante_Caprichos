@@ -1,0 +1,399 @@
+/* Estilos generales (mantener los que ya tenías) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f3f7;
+    color: #333;
+}
+
+.reseñas-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.reseñas-content h2 {
+    font-size: 2.5rem;
+    color: #ff6b9d;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.reseñas-content h2::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 3px;
+    background-color: #ff6b9d;
+}
+
+/* Spot messages (mantener los que ya tenías) */
+.spot-messages {
+    position: relative;
+    height: 120px;
+    margin: 30px 0;
+    overflow: hidden;
+}
+
+.spot {
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(20px);
+}
+
+.spot.active {
+    opacity: 1;
+    transform: translateY(0);
+
+}
+
+.spot i {
+    font-size: 2rem;
+    color: #ff6b9d;
+    margin-bottom: 15px;
+}
+
+.spot p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Rating (mantener los que ya tenías) */
+.rating-container {
+    margin: 30px 0;
+}
+
+.stars {
+    font-size: 2.5rem;
+    color: #ddd;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.stars .fas {
+    margin: 0 5px;
+    transition: all 0.2s;
+}
+
+.stars .fas:hover {
+    transform: scale(1.2);
+}
+
+.stars .active {
+    color: #ffc107;
+}
+
+.rating-text {
+    font-size: 1.1rem;
+    color: #666;
+    font-style: italic;
+}
+
+/* Formulario (mantener los que ya tenías) */
+.reseña-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.reseña-form textarea {
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-family: inherit;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 150px;
+    margin-bottom: 20px;
+    transition: border 0.3s;
+}
+
+.reseña-form textarea:focus {
+    border-color: #ff6b9d;
+    outline: none;
+}
+
+.reseña-form input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #eee;
+    border-radius: 10px;
+    font-size: 1rem;
+    margin-bottom: 20px;
+    transition: border 0.3s;
+}
+
+.reseña-form input:focus {
+    border-color: #ff6b9d;
+    outline: none;
+}
+
+.reseña-form button {
+    background-color: #ff6b9d;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.1rem;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: block;
+    margin: 0 auto;
+}
+
+.reseña-form button:hover {
+    background-color: #e05d87;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+}
+
+/* CTA (mantener los que ya tenías) */
+.reseñas-cta {
+    margin-top: 50px;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.reseñas-cta p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    color: #555;
+}
+
+.cta-button {
+    background-color: #ff6b9d;
+    color: white;
+    text-decoration: none;
+    padding: 12px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.cta-button:hover {
+    background-color: #e05d87;
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(255, 107, 157, 0.4);
+}
+
+/* Responsive (mantener los que ya tenías) */
+@media (max-width: 768px) {
+    .reseñas-content h2 {
+        font-size: 2rem;
+    }
+
+    .spot i {
+        font-size: 1.5rem;
+    }
+
+    .spot p {
+        font-size: 1rem;
+    }
+
+    .stars {
+        font-size: 2rem;
+    }
+}
+
+/* NUEVOS ESTILOS PARA EL FEED DE RESEÑAS */
+.feed-reseñas {
+    margin-top: 60px;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.feed-reseñas h3 {
+    font-size: 1.8rem;
+    color: #ff6b9d;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 15px;
+}
+
+.lista-reseñas {
+    display: grid;
+    /* Usamos CSS Grid para organizar las reseñas */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    /* 280px como mínimo */
+    gap: 25px;
+    /* Espacio entre las reseñas */
+    text-align: left;
+}
+
+.reseña-item {
+    background-color: #fefefe;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.reseña-item:hover {
+    transform: translateY(-5px);
+}
+
+.reseña-item .header-reseña {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    border-bottom: 1px dashed #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.reseña-item .nombre-usuario {
+    font-weight: bold;
+    color: #444;
+    font-size: 1.1em;
+}
+
+.reseña-item .estrellas-reseña {
+    color: #ffc107;
+    /* Estrellas doradas para las reseñas mostradas */
+    font-size: 1.1em;
+}
+
+.reseña-item p {
+    font-size: 0.95em;
+    color: #555;
+    line-height: 1.5;
+    margin-top: 15px;
+    font-style: italic;
+}
+
+/* Estilos para cuando no hay reseñas */
+.lista-reseñas.empty-state {
+    display: block;
+    /* Vuelve a bloque para el mensaje */
+    text-align: center;
+    color: #888;
+    font-size: 1.1em;
+    padding: 30px;
+    background-color: #f0f0f0;
+    border-radius: 10px;
+}
+
+
+/*----------------------------------------------------- menu----------------------------------------------- */
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        width: 80%;
+        height: 100vh;
+        background-color: #ff9c22d6;
+        flex-direction: column;
+        justify-content: center;
+        padding: 2rem;
+        transition: left 0.3s ease;
+        z-index: 999;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .hamburger {
+        display: block;
+        z-index: 1001;
+    }
+
+    .main-content {
+        padding: 1rem;
+    }
+
+    .menu-items {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Barra de navegación */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #ff9c22d6;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.logo img {
+    height: 50px;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 0;
+    position: relative;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: white;
+    transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+    width: 100%;
+}
+
+.hamburger {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
+}

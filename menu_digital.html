@@ -1,114 +1,231 @@
-<!-- menu_digital.html -->
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menú - Caprichos</title>
-    <link rel="stylesheet" href="menu_digital.css"> <!-- mismo CSS -->
+    <title>Menú Digital - Caprichos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="menu_digital.css">
 </head>
 
 <body>
+    <!-- Barra de navegación -->
+<header class="navbar">
+    <div class="logo">
+        <a href="index.html"><img src="img/FONDOS/LOGO.png" alt="Logo Caprichos"></a>
+    </div>
+    <nav class="nav-links">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="index.html#servicios">Servicios</a></li> <!-- Enlace modificado -->
+        </ul>
+    </nav>
+    <button class="hamburger">
+        <i class="fas fa-bars"></i>
+    </button>
+</header>
 
-    <!-- Menú de navegación (igual al de index.html) -->
-    <header>
-        <nav class="menu-navegacion">
-            <a href="index.html">Inicio</a>
-            <a href="servicios.html">Servicios</a>
-            <a href="productos.html">Productos</a>
-            <a href="informacion.html">Información</a>
-        </nav>
-    </header>
+    <!-- Contenido principal -->
+    <main class="main-content">
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar...">
+            <button><i class="fas fa-search"></i></button>
+        </div>
 
-    <!-- Contenido específico de esta tarjeta -->
-    <main class="contenido-tarjeta">
-        <p>Aquí puedes consultar los platos, bebidas y postres de nuestro restaurante.</p>
-        <!-- Aquí puedes insertar imágenes, descripciones, precios, etc. -->
+        <section class="menu-section">
+            <h1>Menú Caprichos</h1>
+
+            <div class="menu-categories">
+                <button class="category-btn active">Todo</button>
+                <button class="category-btn">Platos Fuertes</button>
+                <button class="category-btn">Bebidas</button>
+                <button class="category-btn">Postres</button>
+            </div>
+
+            <!-- Dentro de la sección menu-items, después de los items existentes -->
+            <div class="menu-items">
+                <!-- Item 1 (existente) -->
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/sandwichCompleto.png" alt="Lasaña">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Lasaña</h2>
+                            <span class="price">$12.000</span>
+                        </div>
+                        <p class="description">Carne molida, placas de lasaña, tomate triturado, cebolla, ajo,
+                            zanahoria, queso mozzarella, mantequilla, leche, pimienta, orégano</p>
+                        <div class="item-footer">
+                            <span class="category-tag">Plato fuerte</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Item 2 (existente) -->
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/coctel.png" alt="Hamburguesa doble carne">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Coctel de camarones</h2>
+                            <span class="price">$22.000</span>
+                        </div>
+                        <p class="description">Pan, chorizo santa rosano, lechuga, tomate, queso cheedar, doble carne,
+                            cebolla acaramelizada, mayonesa, mostaza y salsa de la casa</p>
+                        <div class="item-footer">
+                            <span class="category-tag">postres</span>
+                            <span class="rating">★★★★★</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Nuevos items -->
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/desgranadoMARINO.png" alt="Perro Loco">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Desgranado marino</h2>
+                            <span class="price">$16.000</span>
+                        </div>
+                        <p class="description">Salchicha premium, papitas, salsas y pan suave horneado</p>
+                        <div class="item-footer">
+                            <span class="category-tag">Plato fuerte</span>
+                            <span class="rating">★★★☆☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/Ensalada2.png" alt="Desgranado Marino">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Picada especial X2</h2>
+                            <span class="price">$8.000</span>
+                        </div>
+                        <p class="description">Helado cremoso artesanal con trozos de fruta natural</p>
+                        <div class="item-footer">
+                            <span class="category-tag">Postre</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/hamburguesa1.png" alt="Desgranado Marino">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Hamburguesa con camarones</h2>
+                            <span class="price">$8.000</span>
+                        </div>
+                        <p class="description">Helado cremoso artesanal con trozos de fruta natural</p>
+                        <div class="item-footer">
+                            <span class="category-tag">Postre</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/hamburguesa2.png" alt="Desgranado Marino">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Hamburguesa doble carne</h2>
+                            <span class="price">$8.000</span>
+                        </div>
+                        <p class="description">Helado cremoso artesanal con trozos de fruta natural</p>
+                        <div class="item-footer">
+                            <span class="category-tag">Postre</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/hotDog.png" alt="Desgranado Marino">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Perro Americano</h2>
+                            <span class="price">$8.000</span>
+                        </div>
+                        <p class="description">Helado cremoso artesanal con trozos de fruta natural</p>
+                        <div class="item-footer">
+                            <span class="category-tag">Postre</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/papaslocas.png" alt="Desgranado Marino">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Papas locas</h2>
+                            <span class="price">$8.000</span>
+                        </div>
+                        <p class="description">Helado cremoso artesanal con trozos de fruta natural</p>
+                        <div class="item-footer">
+                            <span class="category-tag">Postre</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/perro.jpg" alt="Desgranado Marino">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Perro Especial</h2>
+                            <span class="price">$8.000</span>
+                        </div>
+                        <p class="description">Helado cremoso artesanal con trozos de fruta natural</p>
+                        <div class="item-footer">
+                            <span class="category-tag">Postre</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <div class="item-image">
+                        <img src="img/COMIDAS/picada.png" alt="Desgranado Marino">
+                    </div>
+                    <div class="item-content">
+                        <div class="item-header">
+                            <h2>Picada</h2>
+                            <span class="price">$8.000</span>
+                        </div>
+                        <p class="description">Helado cremoso artesanal con trozos de fruta natural</p>
+                        <div class="item-footer">
+                            <span class="category-tag">Postre</span>
+                            <span class="rating">★★★★☆</span>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!-- Añade más items siguiendo el mismo patrón -->
+            </div>
+        </section>
     </main>
 
-    <!-- Contenido del Menú Digital -->
-    <div class="contenido-menu">
-        <h1>Menú Salado</h1>
-        <div class="productos">
-
-            <div class="producto">
-                <img src="img/COMIDAS/sandwichCompleto.png" alt="Jugo natural">
-                <h3>Lasaña</h3>
-                <p>carne molida, Placas de lasaña, tomate triturado, cebolla, ajo,
-                 zanahoria, queso mozzarella, Mantequilla, leche, pimienta, orégano</p>
-                <p class="precio">$12.000</p>
-            </div>
-           
-
-            <div class="producto">
-                <img src="img/COMIDAS/hamburguesa2.png" alt="Jugo natural">
-                <h3>Hamburguesa doble carne</h3>
-                <p>pan, chorizo santa rosano, lechuga, tomate, queso cheedar,
-                    doble carne, cebolla acaramelizada, mayonesa, mostaza y salsa de la casa</p>
-                </p>
-                <p class="precio">$22.000</p>
-            </div>
-            <div class="producto">
-                <img src="img/COMIDAS/perro.jpg" alt="Perro caliente">
-                <h3>Perro Loco</h3>
-                <p>Salchicha premium, papitas, salsas y pan suave horneado.</p>
-                <p class="precio">$16.000</p>
-            </div>
-
-             <div class="producto">
-                <img src="img/COMIDAS/hamburguesa1.png" alt="Hamburguesa clásica">
-                <h3>Hamburguesa Clásica</h3>
-                <p>Carne 100% res, queso fundido, lechuga fresca y pan artesanal.</p>
-                <p class="precio">$18.000</p>
-            </div>
-
-            <div class="producto">
-                <img src="img/COMIDAS/desgranadoMARINO.png" alt="Helado de fresa">
-                <h3>Desgranado Marino</h3>
-                <p>Helado cremoso artesanal con trozos de fruta natural.</p>
-                <p class="precio">$8.000</p>
-            </div>
-            <div class="producto">
-                <img src="img/COMIDAS/coctel.png" alt="Jugo natural">
-                <h3>Coctel de camarones</h3>
-                <p>Refrescante jugo 100% natural, sin azúcar añadida.</p>
-                <p class="precio">$6.000</p>
-            </div>
-
-            <div class="producto">
-                <img src="img/COMIDAS/Ensalada2.png" alt="Jugo natural">
-                <h3>Jugo Natural</h3>
-                <p>Refrescante jugo 100% natural, sin azúcar añadida.</p>
-                <p class="precio">$6.000</p>
-            </div>
-
-            <div class="producto">
-                <img src="img/COMIDAS/papaslocas.png" alt="Jugo natural">
-                <h3>Papas locas</h3>
-                <p>Refrescante jugo 100% natural, sin azúcar añadida.</p>
-                <p class="precio">$6.000</p>
-            </div>
-
-            <div class="producto">
-                <img src="img/COMIDAS/picada.png" alt="Jugo natural">
-                <h3>Picada</h3>
-                <p>Refrescante jugo 100% natural, sin azúcar añadida.</p>
-                <p class="precio">$6.000</p>
-            </div>
-
-
-             <div class="producto">
-                <img src="img/COMIDAS/hotDog.png" alt="Jugo natural">
-                <h3>hot dog especial</h3>
-                <p>Jamón, cerdo asado, Queso suizo, Pepinillos encurtidos, Mostaza amarilla y mantequilla</p>
-                <p class="precio">$6.000</p>
-            </div>
-
-            <!--MENU DULCE-->
-
-        </div>
-    </div>
+    <script src="menu_digital.js"></script>
 </body>
 
 </html>
