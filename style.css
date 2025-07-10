@@ -498,3 +498,10 @@ body {
   border-color: #ff69b4;
   box-shadow: 0 0 10px #ff69b4;
 }
+section {
+  scroll-margin-top: 80px; /* ajusta el valor al alto de tu navbar */
+}
+#about, #services, #gallery, #contact {
+  scroll-margin-top: 200px;
+}
+
